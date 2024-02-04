@@ -1,3 +1,7 @@
+<div align="center">
+  <img src="./assets/nexusframework.png" alt="Nexus Framework Logo" width="200"/>
+</div>
+
 # Nexus Framework
 
 ## Overview
