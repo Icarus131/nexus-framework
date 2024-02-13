@@ -68,8 +68,3 @@
 - Use HTTPS for communication between agents and the C2 server.
 - Regularly update authentication credentials.
 - Implement proper access controls to restrict unauthorized access to the dashboard and API.
-
-#### Contributing
-
-- Contributions are welcome! Please follow the Contribution Guidelines.
-  License
