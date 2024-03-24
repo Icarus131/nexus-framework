@@ -27,7 +27,7 @@ const LoginForm = ({ login }) => {
   };
 
   return (
-    <div className="flex items-center justify-center h-screen">
+    <div className="flex font-poppins items-center justify-center h-screen">
       <form onSubmit={handleSubmit} className="w-96 space-y-4">
         {error && <div className="text-red-500">{error}</div>}
         <div className="card w-96 bg-base-100 shadow-xl">
