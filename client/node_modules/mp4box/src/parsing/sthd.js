@@ -1,0 +1,2 @@
+BoxParser.createFullBoxCtor("sthd");
+
