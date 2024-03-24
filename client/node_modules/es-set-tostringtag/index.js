@@ -9,6 +9,7 @@ var hasOwn = require('hasown');
 
 var toStringTag = hasToStringTag ? Symbol.toStringTag : null;
 
+/** @type {import('.')} */
 module.exports = function setToStringTag(object, value) {
 	var overrideIfSet = arguments.length > 2 && arguments[2] && arguments[2].force;
 	if (toStringTag && (overrideIfSet || !hasOwn(object, toStringTag))) {

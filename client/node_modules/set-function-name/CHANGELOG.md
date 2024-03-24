@@ -5,6 +5,15 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [v2.0.2](https://github.com/jfsiii/set-function-name/compare/v2.0.1...v2.0.2) - 2024-02-19
+
+### Commits
+
+- [meta] add types [`ae747cd`](https://github.com/jfsiii/set-function-name/commit/ae747cdcf4a986e6974a375be8ec04dd7565f0bd)
+- [Dev Deps] update `aud`, `npmignore`, `object-inspect`, `tape` [`01aafcb`](https://github.com/jfsiii/set-function-name/commit/01aafcb82e4df653fcbd666ce4f256c06f70d94e)
+- [Deps] update `define-data-property`, `has-property-descriptors` [`0ef6338`](https://github.com/jfsiii/set-function-name/commit/0ef6338fac84f63c2445855778bfd9271ae048cb)
+- [Refactor] use `es-errors` [`0b23e87`](https://github.com/jfsiii/set-function-name/commit/0b23e878a16c959bd8b1aa7152d65818dd90578c)
+
 ## [v2.0.1](https://github.com/jfsiii/set-function-name/compare/v2.0.0...v2.0.1) - 2023-09-13
 
 ### Commits

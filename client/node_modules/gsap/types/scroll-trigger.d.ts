@@ -90,10 +90,11 @@ declare class ScrollTrigger {
    * ```
    *
    * @static
+   * @param {string} [scrollRestoration]
    * @memberof ScrollTrigger
    * @link https://greensock.com/docs/v3/Plugins/ScrollTrigger/static.clearScrollMemory()
    */
-  static clearScrollMemory(): void;
+  static clearScrollMemory(scrollRestoration?: string): void;
 
   /**
    * Configure ScrollTrigger
@@ -683,7 +684,7 @@ declare namespace ScrollTrigger {
   type Callback = (self: ScrollTrigger) => any;
   type BatchCallback = (targets: Element[], triggers: ScrollTrigger[]) => any;
   type NumFunc = () => number;
-  type SnapFunc = (value: number) => number;
+  type SnapFunc = (value: number, self?: ScrollTrigger) => number;
   type SnapDirectionalFunc = (value: number, direction?: number, threshold?: number) => number;
   type GetterSetterNumFunc = (value?: number) => number | void;
   type GetterRectFunc = () => RectObj;

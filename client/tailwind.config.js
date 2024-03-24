@@ -15,7 +15,7 @@ export default {
     themes: [
       {
         business: {
-          ...require("daisyui/src/theming/themes")["forest"],
+          ...require("daisyui/src/theming/themes")["luxury"],
           ".btn": {
             "border-radius": "10px",
           },

@@ -5,6 +5,7 @@
 
 	"rules": {
 		"id-length": "off",
+		"no-extra-parens": "off",
 	},
 
 	"overrides": [
