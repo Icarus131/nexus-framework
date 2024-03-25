@@ -1,13 +1,13 @@
 const ConnectedMachinesPane = () => {
   return (
-    <div>
-      <ul className="menu bg-base-200 w-56 rounded-box">
-        <li className="menu-title">Connected Machines</li>
+    <div className="font-poppins">
+      <h1 className="text-xl">Connected Machines</h1>
+      <ul className="menu menu-lg bg-base-200 w-100">
         <li>
           <a>Item 1</a>
         </li>
         <li>
-          <a>Item 2</a>
+          <a className="active">Item 2</a>
         </li>
         <li>
           <a>Item 3</a>

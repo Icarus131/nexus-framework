@@ -81,19 +81,20 @@ const Dashboard = () => {
           <h1 className="font-poppins text-4xl font-bold mt-10 ml-10">
             Dashboard
           </h1>
+
           <div className="px-10 mt-5 grid grid-rows-2 grid-flow-col gap-4 h-screen mb-10">
             <div className="card border border-base-300 mt-10">
-              <div className="card-body flex justify-center px-4 py-16 bg-base-200 rounded-2xl">
+              <div className="card-body flex justify-self-start px-4 py-16 bg-base-200 rounded-2xl">
                 <ConnectedMachinesPane />
               </div>
             </div>
             <div className="card border border-base-300 mt-2">
-              <div className="card-body flex justify-center px-4 py-16 bg-base-200 rounded-2xl">
+              <div className="card-body flex justify-self-start px-4 py-16 bg-base-200 rounded-2xl">
                 <ListenersPane />
               </div>
             </div>
-            <div className="card border border-base-300 mt-10 row-span-2">
-              <div className="card-body flex justify-center px-4 py-16 bg-base-200 rounded-2xl">
+            <div className="mockup-window card border border-base-300 mt-10 row-span-2">
+              <div className="card-body flex justify-center px-4 py-16 bg-base-200 rounded-sm">
                 <ActiveConnectionPane />
               </div>
             </div>
