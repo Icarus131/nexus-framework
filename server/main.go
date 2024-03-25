@@ -9,10 +9,14 @@ import (
 	"encoding/json"
 	"fmt"
 	"io"
+	"log"
 	"net/http"
 	"os"
+	"path/filepath"
 	"strings"
 	"sync"
+
+	"github.com/joho/godotenv"
 )
 
 type User struct {
@@ -27,6 +31,14 @@ var (
 )
 
 func main() {
+	absPath, err := filepath.Abs("../env")
+	if err != nil {
+		log.Fatal("Error getting absolute path to .env file:", err)
+	}
+
+	if err := godotenv.Load(absPath); err != nil {
+		log.Fatal("Error loading .env file")
+	}
 	apiKey = generateAPIKey()
 	fmt.Println("API Key:", apiKey)
 	go startServer()
@@ -177,7 +189,12 @@ func registerUser() {
 		return
 	}
 
-	req, err := http.NewRequest("POST", "http://localhost:8080/users", bytes.NewBuffer(userJSON))
+	port := os.Getenv("PORT")
+	host := os.Getenv("HOST")
+
+	regurl := "http://" + host + ":" + port + "/users"
+
+	req, err := http.NewRequest("POST", regurl, bytes.NewBuffer(userJSON))
 	if err != nil {
 		fmt.Println("Error creating request:", err)
 		return
