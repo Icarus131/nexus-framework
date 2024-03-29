@@ -7,8 +7,6 @@ import {
 } from "react-router-dom";
 import LoginForm from "./components/LoginForm";
 import Dashboard from "./components/Dashboard";
-import dotenv from "dotenv";
-dotenv.config({ path: "../../.env" });
 
 const App = () => {
   const [authenticated, setAuthenticated] = useState(false);

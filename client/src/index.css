@@ -4,6 +4,12 @@
 @tailwind components;
 @tailwind utilities;
 
+.toast-message {
+  background: #171618;
+  color: #fff;
+  font-size: 15px;
+}
+
 .body {
   background-image: url("background.jpg");
 }

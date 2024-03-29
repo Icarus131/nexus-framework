@@ -31,7 +31,7 @@ var (
 )
 
 func main() {
-	absPath, err := filepath.Abs("../env")
+	absPath, err := filepath.Abs("../.env")
 	if err != nil {
 		log.Fatal("Error getting absolute path to .env file:", err)
 	}
@@ -217,4 +217,22 @@ func registerUser() {
 	} else {
 		fmt.Println("Failed to register user. Status code:", resp.StatusCode)
 	}
+}
+
+type Listener struct {
+	Port int `json:"port"`
+}
+
+var listeners []Listener
+
+func addListener(w http.ResponseWriter, r *http.Request) {
+	var newListener Listener
+	err := json.NewDecoder(r.Body).Decode(&newListener)
+	if err != nil {
+		http.Error(w, "Failed to decode request body", http.StatusBadRequest)
+		return
+	}
+
+	listeners = append(listeners, newListener)
+	fmt.Fprintf(w, "Listener added successfully")
 }
