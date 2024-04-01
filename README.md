@@ -37,33 +37,25 @@ go run main.go
 
 #### Agent Registration
 
-- Agents should be configured to register with the C2 server upon startup. Registration involves sending authentication credentials and receiving a unique identifier.
+- Agents should be configured to register with the C2 server upon startup. Registration involves sending authentication credentials and a uniquely generated API key on each run.
 
 - Example agent registration payload:
 
-```json
-{
-  "username": "agent1",
-  "password": "securepassword123"
-}
-```
+```bash
 
-#### Command Execution
+API Key: f06e7d075dec24df1ad96bde8f3b98cb726ad564c7b28fc329dffbfa7f369222
+ -> Welcome to the Nexus-Framework Setup. Use 'r' to register a new user or 'q' to quit.
 
-- Commands can be sent to registered agents through the dashboard or API endpoints.
+ ┬─[Nexus-Framework]
+ ╰─> r
+Register a new user:
+Enter username: icarus
+Enter password: icarus123
+Received API Key: f06e7d075dec24df1ad96bde8f3b98cb726ad564c7b28fc329dffbfa7f369222
+User registered successfully!
 
-- Example command payload:
-
-```json
-{
-  "agent_id": "abcd1234",
-  "command": "shell",
-  "args": ["ls", "-l"]
-}
 ```
 
 #### Security Considerations
 
-- Use HTTPS for communication between agents and the C2 server.
-- Regularly update authentication credentials.
-- Implement proper access controls to restrict unauthorized access to the dashboard and API.
+- Uses HTTPS for communication between agents and the C2 server.
