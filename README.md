@@ -11,10 +11,10 @@
 
 ## Features
 
-- [ ] Agent registration and authentication
+- [x] Agent registration and authentication
 - [ ] Command execution on registered agents
 - [ ] Communication encryption
-- [ ] Web-based dashboard for monitoring and control
+- [x] Web-based dashboard for monitoring and control
 - [ ] Extensible plugin architecture
 
 ## Getting Started
@@ -27,12 +27,11 @@
 ### Installation
 
 1. Clone the repository:
-   ```bash
-   git clone https://github.com/your-username/c2-server.git
-   cd c2-server
-   go build
-   /c2-server
-   ```
+```bash
+git clone https://github.com/Icarus131/nexus-framework/
+cd nexus-framework
+go run main.go
+```
 
 ### Usage
 
