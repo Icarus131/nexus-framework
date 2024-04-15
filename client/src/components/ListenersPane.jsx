@@ -83,9 +83,6 @@ const ListenersPane = () => {
         <li>
           <a className="active">Item 2</a>
         </li>
-        <li>
-          <a>Item 3</a>
-        </li>
       </ul>
     </div>
   );

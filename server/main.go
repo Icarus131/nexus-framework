@@ -9,7 +9,9 @@ import (
 	"encoding/json"
 	"fmt"
 	"io"
+	"io/ioutil"
 	"log"
+	"net"
 	"net/http"
 	"os"
 	"path/filepath"
@@ -63,6 +65,20 @@ func main() {
 			fmt.Println("\nInvalid input. Press 'r' to register a new user or 'q' to quit.\n")
 		}
 	}
+}
+
+func spawnListener() {
+	lport := os.Getenv("LISTENER_PORT")
+	host := os.Getenv("HOST")
+	listener := ("http://" + host + ":" + lport)
+	addl := []byte(listener)
+	net.Listen("tcp", listener)
+	err := ioutil.WriteFile("listeners.txt", addl, 0o644)
+	if err != nil {
+		fmt.Println("Error writing to file:", err)
+		return
+	}
+	fmt.Println("Added new listener:" + listener)
 }
 
 func startServer() {
@@ -221,18 +237,4 @@ func registerUser() {
 
 type Listener struct {
 	Port int `json:"port"`
-}
-
-var listeners []Listener
-
-func addListener(w http.ResponseWriter, r *http.Request) {
-	var newListener Listener
-	err := json.NewDecoder(r.Body).Decode(&newListener)
-	if err != nil {
-		http.Error(w, "Failed to decode request body", http.StatusBadRequest)
-		return
-	}
-
-	listeners = append(listeners, newListener)
-	fmt.Fprintf(w, "Listener added successfully")
 }
