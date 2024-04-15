@@ -22,7 +22,6 @@
 ### Prerequisites
 
 - Golang installed on the server
-- Dependencies: [List dependencies, if any]
 
 ### Installation
 
